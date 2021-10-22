@@ -10,7 +10,7 @@ const ProductCard = ({ id, title, image, description, supportedPlatforms }) => {
     <>
       <article className="product-card" onClick={() => setShowPortal((shouldShowPortal) => !shouldShowPortal)}>
         <img className="product-card__image" src={image} />
-        <p className="product-card__title">{title}</p>
+        <h2 className="product-card__title">{title}</h2>
       </article>
 
       <ProductModal

@@ -43,7 +43,7 @@ const Modal = ({ onClose, children }) => {
       <button className="modal__close-button" onClick={onClose}>
         X
       </button>
-      {children}
+      <div className="modal__children-wrapper">{children}</div>
     </article>,
     modalOverlay
   );

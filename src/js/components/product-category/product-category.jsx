@@ -6,7 +6,7 @@ const ProductCategory = ({ category, products }) => {
   return (
     <section className="product-category">
       <h2 className="product-category__title">{category}</h2>
-      <div className="product-category-cards-grid">
+      <div className="product-category__cards-grid">
         {products.map(({ id, title, image, description, supported_platforms }) => (
           <ProductCard
             key={`product-card-${id}`}

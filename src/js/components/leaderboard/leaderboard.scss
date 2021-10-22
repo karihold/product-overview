@@ -1,3 +1,6 @@
+@import 'variables/colors.scss';
+@import 'mixins/breakpoints.scss';
+
 .leaderboard {
   display: flex;
   flex-flow: column;
@@ -30,6 +33,37 @@
     order: 3;
 
     align-self: flex-end;
+  }
+
+  @include smaller-than(1024px) {
+    width: 80%;
+  }
+
+  @include smaller-than(640px) {
+    width: 100%;
+    height: fit-content;
+    flex-flow: column;
+    align-items: center;
+    gap: 1.8rem;
+
+    border-bottom: 1px solid $gray;
+    padding-bottom: 1.8rem;
+    margin-bottom: 1.8rem;
+
+    > li:nth-of-type(1) {
+      order: 1;
+    }
+
+    > li:nth-of-type(2) {
+      order: 2;
+
+      align-self: center;
+    }
+    > li:nth-of-type(3) {
+      order: 3;
+
+      align-self: center;
+    }
   }
 }
 

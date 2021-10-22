@@ -1,8 +1,9 @@
 @import 'variables/colors.scss';
+@import 'mixins/breakpoints.scss';
 
 .leaderboard-user {
   display: flex;
-  flex-flow: row;
+  flex-flow: row nowrap;
   justify-content: center;
 
   &--is-top-three {
@@ -10,7 +11,7 @@
 
     position: relative;
 
-    .leaderboard-user-image-wrapper {
+    .leaderboard-user__image-wrapper {
       margin-bottom: 14px;
     }
 
@@ -34,10 +35,15 @@
       color: $orange;
       background-color: $dark-blue;
     }
+
+    @include smaller-than(640px) {
+      flex-flow: row nowrap;
+      gap: 0.8rem;
+    }
   }
 }
 
-.leaderboard-user-image-wrapper {
+.leaderboard-user__image-wrapper {
   position: relative;
 }
 

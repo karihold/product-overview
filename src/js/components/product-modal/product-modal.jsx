@@ -3,15 +3,15 @@ import Modal from 'components/modal/modal';
 import Leaderboard from 'components/leaderboard/leaderboard';
 import './product-modal.scss';
 
-const ProductModal = ({ showModal, title, image, description, supportedPlatforms, productId, onClose }) => {
+const ProductModal = ({ showModal, title, description, supportedPlatforms, productId, onClose }) => {
   if (!showModal) return <></>;
 
   return (
     <Modal onClose={onClose}>
-      <section className="product-modal-wrapper">
+      <section className="product-modal">
         <h2 className="product-modal__title">{title}</h2>
         <p className="product-modal__description">{description}</p>
-        <section>
+        <section className="product-modal__supported-section">
           <h3 className="product-modal__supported-title">Supported Platforms</h3>
           <ul className="product-modal__supported-list">
             {supportedPlatforms.map((platform) => (
@@ -21,9 +21,8 @@ const ProductModal = ({ showModal, title, image, description, supportedPlatforms
             ))}
           </ul>
         </section>
+        <Leaderboard productId={productId} />
       </section>
-
-      <Leaderboard productId={productId} />
     </Modal>
   );
 };
