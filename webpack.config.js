@@ -23,6 +23,7 @@ module.exports = (env) => ({
       scss: path.resolve(srcPath, 'scss/'),
       assets: path.resolve(srcPath, 'assets/'),
       variables: path.resolve(srcPath, 'scss/variables'),
+      data: path.resolve(srcPath, 'data/'),
     },
     extensions: ['.js', '.jsx'],
   },
