@@ -6,10 +6,25 @@
 
 body {
   background-color: #f0f0f0;
+  font-family: 'roboto';
+  color: #1d1d1d;
+  line-height: 1.5;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 main {
   padding: 40px;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 2em;
 }
 
 ol,
