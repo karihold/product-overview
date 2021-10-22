@@ -5,11 +5,11 @@ const LeaderboardUser = ({ username, image, score, rank }) => {
   return (
     <article className={`leaderboard-user ${rank < 4 ? 'leaderboard-user--is-top-three' : ''}`}>
       <p className="leaderboard-user__rank">{rank}</p>
-      <img className="leaderboard-user__image" src={image} />
-      <div className="leaderboard-user__div">
+      <div className="leaderboard-user-image-wrapper">
+        <img className="leaderboard-user__image" src={image} />
         <p className="leaderboard-user__username">{username}</p>
-        <p className="leaderboard-user__score">{score}</p>
       </div>
+      <p className="leaderboard-user__score">{score}</p>
     </article>
   );
 };

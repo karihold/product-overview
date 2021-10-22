@@ -1,3 +1,5 @@
+@import 'variables/colors.scss';
+
 .leaderboard-user {
   display: flex;
   flex-flow: row;
@@ -8,22 +10,35 @@
 
     position: relative;
 
-    > .leaderboard-user__rank {
+    .leaderboard-user-image-wrapper {
+      margin-bottom: 14px;
+    }
+
+    .leaderboard-user__rank {
       position: absolute;
       top: -17px;
       left: -19px;
-      color: orange;
-      background-color: #293040;
+      color: $orange;
+      background-color: $dark-blue;
       border-radius: 50%;
       padding: 5px 18px;
     }
 
-    > .leaderboard-user__image {
-      border: 2px solid #293040;
+    .leaderboard-user__image {
+      border: 2px solid $dark-blue;
 
       border-radius: 50%;
     }
+
+    .leaderboard-user__username {
+      color: $orange;
+      background-color: $dark-blue;
+    }
   }
+}
+
+.leaderboard-user-image-wrapper {
+  position: relative;
 }
 
 .leaderboard-user__image {
@@ -37,10 +52,23 @@
 }
 
 .leaderboard-user__username {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1em;
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $turqoise;
+  color: $text-color-white;
+  border-radius: 4px;
+  padding: 0 4px;
 }
+
 .leaderboard-user__score {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  align-self: center;
 }
 
 .leaderboard-user__div {
@@ -48,7 +76,7 @@
   display: flex;
   flex-flow: column nowrap;
   text-align: center;
-  border: 2px solid #293040;
+  border: 2px solid $dark-blue;
   height: fit-content;
   width: 100px;
   padding: 10px 20px;
