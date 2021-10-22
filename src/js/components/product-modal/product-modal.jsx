@@ -12,7 +12,7 @@ const ProductModal = ({ showModal, title, image, description, supportedPlatforms
         <h2 className="product-modal__title">{title}</h2>
         <p className="product-modal__description">{description}</p>
         <section>
-          <h3 className="product-modal__supported-title">Supported Platforms:</h3>
+          <h3 className="product-modal__supported-title">Supported Platforms</h3>
           <ul className="product-modal__supported-list">
             {supportedPlatforms.map((platform) => (
               <li className="product-modal__supported-list-item" key={`product-card-${title}-platform-${platform}`}>
