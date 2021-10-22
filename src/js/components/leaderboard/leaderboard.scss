@@ -38,5 +38,7 @@
 }
 
 .leaderboard-continued__list-item {
-  margin-top: 0.8rem;
+  &:not(:last-of-type) {
+    margin-bottom: 1.2rem;
+  }
 }
