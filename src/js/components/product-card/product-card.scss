@@ -1,8 +1,11 @@
+@import 'variables/colors.scss';
+@import 'mixins/breakpoints.scss';
+
 .product-card {
   cursor: pointer;
   border-radius: 8px;
   box-shadow: 0 4px 6px 0 hsla(0, 0, 0%, 0.2);
-  background-color: #a5f3fe;
+  background-color: $light-blue;
 
   display: flex;
   flex-flow: column;
@@ -14,9 +17,14 @@
   border-radius: 8px 8px 0 0;
 }
 .product-card__title {
-  background-color: #fff;
+  background-color: $white;
   padding: 30px 20px;
   font-size: 1.5em;
   text-transform: uppercase;
   border-radius: 0 0 8px 8px;
+  text-align: center;
+
+  @include smaller-than(1200px) {
+    font-size: 1.2rem;
+  }
 }

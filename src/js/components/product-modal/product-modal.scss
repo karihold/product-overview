@@ -1,3 +1,5 @@
+@import 'variables/colors.scss';
+
 .product-modal-data-grid {
   display: flex;
   flex-flow: row nowrap;
@@ -38,8 +40,8 @@
 .product-modal__supported-list-item {
   margin-right: 0.5rem;
   margin-bottom: 5rem;
-  color: #eee;
-  background-color: #469ca6;
+  color: $text-color-white;
+  background-color: $turqoise;
   padding: 0.6rem 2rem;
   border-radius: 30px;
   font-size: 1em;

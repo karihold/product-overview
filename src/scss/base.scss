@@ -1,3 +1,6 @@
+@import 'variables/colors.scss';
+@import 'mixins/breakpoints.scss';
+
 * {
   margin: 0;
   padding: 0;
@@ -5,9 +8,9 @@
 }
 
 body {
-  background-color: #f0f0f0;
+  background-color: $gray;
   font-family: 'roboto';
-  color: #1d1d1d;
+  color: $text-color;
   line-height: 1.5;
 
   &.no-scroll {
@@ -16,7 +19,17 @@ body {
 }
 
 main {
-  padding: 40px;
+  padding: 60px;
+  max-width: 1800px;
+  margin: 0 auto;
+
+  @include smaller-than(1024px) {
+    padding: 60px 40px;
+  }
+
+  @include smaller-than(640px) {
+    padding: 40px 20px;
+  }
 }
 
 h2 {
