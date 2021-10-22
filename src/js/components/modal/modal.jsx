@@ -16,21 +16,37 @@ const Modal = ({ onClose, children }) => {
 
   function onModalMount() {
     portalTarget.appendChild(modalOverlay);
-    portalTarget.addEventListener('click', onClose);
     portalTarget.addEventListener('keydown', onEscape);
+    portalTarget.classList.add('no-scroll');
+    modalOverlay.addEventListener('click', closeModal);
   }
 
   function onModalDismount() {
     portalTarget.removeChild(modalOverlay);
-    portalTarget.removeEventListener('click', onClose);
-    portalTarget.removeEventListener('keydown', onEscape);
+    +portalTarget.removeEventListener('keydown', onEscape);
+    portalTarget.classList.remove('no-scroll');
+    modalOverlay.removeEventListener('click', closeModal);
+  }
+
+  function closeModal(event) {
+    const clickedElement = event.target;
+    const overlay = event.currentTarget;
+    if (clickedElement === overlay) onClose();
   }
 
   function onEscape(event) {
     if (event.key === 'Escape') onClose();
   }
 
-  return createPortal(<article className="modal">{children}</article>, modalOverlay);
+  return createPortal(
+    <article className="modal">
+      <button className="modal__close-button" onClick={onClose}>
+        X
+      </button>
+      {children}
+    </article>,
+    modalOverlay
+  );
 };
 
 export default Modal;
