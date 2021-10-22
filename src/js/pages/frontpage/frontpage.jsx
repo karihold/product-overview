@@ -1,12 +1,14 @@
 import React from 'react';
-import Image from 'assets/images/image.png';
+import ProductCategory from 'components/product-category/product-category';
+import productData from 'data/productcategories.json';
 import './frontpage.scss';
 
 const Frontpage = () => {
   return (
     <>
-      <h1>Welcome!</h1>
-      <img src={Image} />
+      {productData.map(({ id, title, products }) => (
+        <ProductCategory key={`product-category-${id}`} category={title} products={products} />
+      ))}
     </>
   );
 };
