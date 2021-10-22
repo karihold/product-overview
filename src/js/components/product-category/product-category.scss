@@ -1,0 +1,15 @@
+.product-category {
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
+
+.product-category__title {
+  margin-bottom: 16px;
+}
+
+.product-category-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
