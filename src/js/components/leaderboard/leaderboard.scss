@@ -1,6 +1,18 @@
+.leaderboard {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.leaderboard-title {
+  margin-bottom: 54px;
+}
+
 .leaderboard-top-three {
+  width: 65%;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: space-between;
   height: 200px;
 
   margin-bottom: 60px;
@@ -19,4 +31,12 @@
 
     align-self: flex-end;
   }
+}
+
+.leaderboard-continued {
+  width: 50%;
+}
+
+.leaderboard-continued__list-item {
+  margin-top: 0.8rem;
 }
