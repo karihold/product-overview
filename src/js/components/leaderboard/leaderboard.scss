@@ -1,0 +1,22 @@
+.leaderboard-top-three {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 200px;
+
+  margin-bottom: 60px;
+
+  > li:nth-of-type(1) {
+    order: 2;
+  }
+
+  > li:nth-of-type(2) {
+    order: 1;
+
+    align-self: flex-end;
+  }
+  > li:nth-of-type(3) {
+    order: 3;
+
+    align-self: flex-end;
+  }
+}
