@@ -2,14 +2,11 @@ import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Frontpage from 'pages/frontpage/frontpage';
-import Header from 'landmarks/header/header';
-import Footer from 'landmarks/footer/footer';
 import 'scss/base.scss';
 
 const App = () => {
   return (
     <Router>
-      <Header />
       <main>
         <Switch>
           <Route exact path="/">
@@ -17,7 +14,6 @@ const App = () => {
           </Route>
         </Switch>
       </main>
-      <Footer />
     </Router>
   );
 };
