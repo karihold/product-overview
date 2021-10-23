@@ -6,7 +6,7 @@ import './leaderboard.scss';
 const Leaderboard = ({ productId }) => {
   const leaderboard = getLeaderboard(productId);
 
-  if (leaderboard.entries.length === 0) return <></>;
+  if (!leaderboard.entries || leaderboard.entries.length <= 0) return <></>;
 
   const topThree = getTopThree(leaderboard);
   const belowTopThree = getBelowTopThree(leaderboard);

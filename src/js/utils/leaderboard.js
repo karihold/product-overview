@@ -1,7 +1,7 @@
 import leaderboards from 'data/leaderboards.json';
 
 export function getLeaderboard(productId) {
-  const leaderboard = leaderboards.find((leaderboard) => leaderboard.product_id === productId) ?? [];
+  const leaderboard = leaderboards.find((leaderboard) => leaderboard.product_id === productId) ?? {};
 
   return leaderboard;
 }
