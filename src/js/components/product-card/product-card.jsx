@@ -8,7 +8,7 @@ const ProductCard = ({ id, title, image, description, supportedPlatforms }) => {
 
   return (
     <>
-      <article className="product-card" onClick={() => setShowPortal((shouldShowPortal) => !shouldShowPortal)}>
+      <article className="product-card" onClick={() => setShowPortal(true)}>
         <img className="product-card__image" src={image} />
         <h2 className="product-card__title">{title}</h2>
       </article>
