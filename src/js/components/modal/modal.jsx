@@ -23,7 +23,7 @@ const Modal = ({ onClose, children }) => {
 
   function onModalDismount() {
     portalTarget.removeChild(modalOverlay);
-    +portalTarget.removeEventListener('keydown', onEscape);
+    portalTarget.removeEventListener('keydown', onEscape);
     portalTarget.classList.remove('no-scroll');
     modalOverlay.removeEventListener('click', closeModal);
   }
